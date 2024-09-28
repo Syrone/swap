@@ -1,0 +1,63 @@
+.fieldset {
+	--_field-width: 100%;
+	--_field-height: 2.75rem;
+	--_field-fs: var(--fs-base);
+	--_field-fw: 400;
+	--_field-lh: var(--lh-normal);
+	--_field-color: var(--text-color);
+	--_field-bg: var(--input-bg);
+	--_field-border: 1px solid var(--input-bg);
+	--_field-radius: 2.5rem;
+	--_field-padding: .75rem 1.5rem;
+	--_field-duration: var(--transition-duration);
+	--_field-type: var(--transition-type);
+
+	--_field-p-fs: var(--_field-fs);
+	--_field-p-fw: var(--_field-fw);
+	--_field-p-lh: var(--_field-lh);
+	--_field-p-color: var(--secondary-light-color);
+
+	width: 100%;
+	position: relative;
+}
+
+.field {
+	width: var(--_field-width);
+	min-height: var(--_field-height);
+	font-size: var(--_field-fs);
+	font-weight: var(--_field-fw);
+	line-height: var(--_field-lh);
+	color: var(--_field-color);
+	background-color: var(--_field-bg);
+	border: var(--_field-border);
+	border-radius: var(--_field-radius);
+	padding: var(--_field-padding);
+	outline: none;
+	transition-property: color, background, border;
+	transition-duration: var(--_field-duration);
+	transition-timing-function: var(--_field-type);
+
+	&::placeholder {
+		font-size: var(--_field-p-fs);
+		font-weight: var(--_field-p-fw);
+		line-height: var(--_field-p-lh);
+		color: var(--_field-p-color);
+	}
+
+	&:focus-visible {
+
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+.field-blank {
+	width: 100%;
+	height: 100%;
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}

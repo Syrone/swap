@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <picture class="coin-picture">
+          <source srcset="/gif/star-flow.gif" type="image/gif">
+          <source srcset="/img/coin/star-flow.webp" type="image/webp">
+          <img loading="lazy" src="/img/coin/star-flow.png" class="coin-image" width="160" height="160" alt="Coin">
+        </picture>
+        <div class="coin-block block">
+          <h2 class="h1 coin-block-title">
+            StarFlow
+          </h2>
+          <p class="coin-block-text">
+            Лучший бот по обмену <span class="text-body">Star</span> To <span class="text-body">TON</span>
+          </p>
+
+          <form>
+            <div class="fieldset">
+              <input type="text" class="field" placeholder="Вставьте адрес вашего TON кошелька">
+              <span class="field-blank"></span>
+            </div>
+  
+            <button type="submit" class="btn btn-base btn-primary" disabled>
+              Создать аккаунт
+            </button>
+          </form>
+        </div>
+        <button type="button" class="btn btn-link coin-block-switch">
+          Continue in English
+        </button>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

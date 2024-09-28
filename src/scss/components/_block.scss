@@ -1,0 +1,6 @@
+.block {
+	background-color: var(--block-bg);
+	border-radius: 1rem;
+	padding: 1rem;
+	transition: background var(--transition-duration) var(--transition-type);
+}
