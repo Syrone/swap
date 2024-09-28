@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <picture class="coin-picture">
+          <source srcset="./gif/ton.gif" type="image/gif">
+          <source srcset="./img/coin/ton.webp" type="image/webp">
+          <img loading="lazy" src="./img/coin/ton.png" class="coin-image" width="160" height="160" alt="Coin">
+        </picture>
+        <div class="coin-block block">
+          <h2 class="h1 coin-block-title">
+            Star To TON
+          </h2>
+          <p class="coin-block-text">
+            <span data-highlight="TON|адрес">TON Придут на адрес</span> 
+            <br>
+            <span>который вы указали при регистрации</span>
+          </p>
+
+          <form>
+            <div class="form-group">
+              <div class="fieldset fieldset--icon fieldset--star">
+                <input type="text" class="field" placeholder="Введите кол-во Star" data-required="number" data-input-id="ton" required>
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div class="fieldset fieldset--icon fieldset--ton">
+                <input type="text" class="field" placeholder="0.00 TON" readonly data-input-target="ton">
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-ton.svg#svg-coin-ton"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-base btn-primary">
+              Подтвердить покупку
+            </button>
+          </form>
+        </div>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,6 +1,12 @@
+.form-group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
 .fieldset {
 	--_field-width: 100%;
-	--_field-height: 2.75rem;
+	--_field-height: 2.875rem;
 	--_field-fs: var(--fs-base);
 	--_field-fw: 400;
 	--_field-lh: var(--lh-normal);
@@ -19,6 +25,59 @@
 
 	width: 100%;
 	position: relative;
+
+	&--icon {
+		--_field-fs: var(--fs-1);
+		--_field-fw: 500;
+
+		.field {
+			text-align: center;
+
+			&:not(:placeholder-shown) {
+				
+				~ .field-blank {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&--star {
+		--_field-padding: .75rem .625rem;
+
+		--_field-fs: var(--fs-4);
+		--_field-p-fw: 400;
+
+		.field {
+
+			&:focus-visible,
+			&:not(:placeholder-shown) {
+				--_field-fs: var(--fs-base);
+				--_field-padding: .625rem 1rem .625rem 1.75rem;
+
+				~ .field-blank {
+					--_field-fs: var(--fs-base);
+					--_field-padding: .75rem 1rem .75rem 1.75rem;
+				}
+			}
+		}
+	}
+
+	&--ton {
+		--_field-padding: .59375rem 1.5rem;
+		--_field-p-fs: var(--fs-base);
+		--_field-color: var(--primary-color);
+		--_field-p-color: var(--_field-color);
+
+		&:focus-visible,
+			&:not(:placeholder-shown) {
+				--_field-padding: .59375rem 1rem .59375rem 1.75rem;
+
+				~ .field-blank {
+					--_field-padding: .59375rem 1rem .59375rem 1.75rem;
+				}
+			}
+	}
 }
 
 .field {
@@ -44,20 +103,40 @@
 		color: var(--_field-p-color);
 	}
 
-	&:focus-visible {
+	&:not([readonly]) {
+		&:focus-visible {
+			--_field-p-color: rgba(0, 0, 0, 0);
 
-		&::placeholder {
-			opacity: 0;
+			&::placeholder {
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
 	}
 }
 
 .field-blank {
-	width: 100%;
-	height: 100%;
-	display: block;
+	display: none;
 	pointer-events: none;
+	user-select: none;
+	white-space: nowrap;
+	font-size: var(--_field-fs);
+	font-weight: var(--_field-fw);
+	line-height: var(--_field-lh);
+	color: rgba(0, 0, 0, 0);
+	border: var(--_field-border);
+	border-color: transparent;
+	border-radius: var(--_field-radius);
+	padding: var(--_field-padding);
 	position: absolute;
 	top: 0;
 	left: 0;
+	right: 0;
+
+	.icon {
+		--_i-color: var(--_field-color);
+
+		margin-left: calc((var(--_i-size) + .375rem) * -1);
+		transform: translateY(.09375em);
+	}
 }
