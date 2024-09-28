@@ -52,12 +52,12 @@
 
 			&:focus-visible,
 			&:not(:placeholder-shown) {
-				--_field-fs: var(--fs-base);
+				--_field-fs: var(--fs-1);
 				--_field-padding: .625rem 1rem .625rem 1.75rem;
 
 				~ .field-blank {
-					--_field-fs: var(--fs-base);
-					--_field-padding: .75rem 1rem .75rem 1.75rem;
+					--_field-fs: var(--fs-1);
+					--_field-padding: .625rem 1rem .625rem 1.75rem;
 				}
 			}
 		}
@@ -69,14 +69,16 @@
 		--_field-color: var(--primary-color);
 		--_field-p-color: var(--_field-color);
 
-		&:focus-visible,
+		.field {
+			
 			&:not(:placeholder-shown) {
 				--_field-padding: .59375rem 1rem .59375rem 1.75rem;
-
+	
 				~ .field-blank {
 					--_field-padding: .59375rem 1rem .59375rem 1.75rem;
 				}
 			}
+		}
 	}
 }
 
