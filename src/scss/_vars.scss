@@ -2,7 +2,7 @@
   // base
   --font-family: "SF-Pro", sans-serif;
   --content-width: 48rem;
-  --container-offset: 1.125rem;
+  --container-offset: 1rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   
   // font-size
@@ -28,12 +28,19 @@
   --secondary-color: #8F8F8F;
   --secondary-light-color: #CBCBCB;
   --secondary-lighter-color: #BABABA;
+  --success-color: #31C859;
+  --error-color: #C83131;
   --title-color: #000;
   --text-color: #000;
   --light-color: #fff;
+  --light-2-color: #F2F2F7;
+  --light-3-color: #C3C3C3;
+  --light-4-color: #DDD;
+  --light-5-color: #B4B4BC;
   --gray-color: #6D6D73;
   --gray-light-color: #98989E;
   --gray-lighter-color: #8E8E93;
+  --border-color: #C7C7CC;
 
   // background
   --body-bg: #F2F2F7;
@@ -56,9 +63,14 @@
     --secondary-lighter-color: #4B4B4B;
     --title-color: #fff;
     --text-color: #98989E;
+    --light-2-color: #2A2A2A;
+    --light-3-color: #fff;
+    --light-4-color: #2A2A2A;
+    --light-5-color: #98989E;
     --gray-color: #6D6D73;
     --gray-light-color: #98989E;
     --gray-lighter-color: #8E8E93;
+    --border-color: #464649;
 
     // background
     --body-bg: #000000;

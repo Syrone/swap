@@ -1,0 +1,17 @@
+.min-h-100 {
+	min-height: 100%;
+}
+
+.v-centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.gap-base {
+	gap: 1rem;
+}
+
+.py-base {
+	padding-block: 1rem;
+}

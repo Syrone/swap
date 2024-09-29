@@ -33,6 +33,7 @@
 		.field {
 			text-align: center;
 
+			&:focus-visible,
 			&:not(:placeholder-shown) {
 				
 				~ .field-blank {
@@ -71,6 +72,7 @@
 
 		.field {
 			
+			&:focus-visible,
 			&:not(:placeholder-shown) {
 				--_field-padding: .59375rem 1rem .59375rem 1.75rem;
 	

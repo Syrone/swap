@@ -4,3 +4,69 @@
 	padding: 1rem;
 	transition: background var(--transition-duration) var(--transition-type);
 }
+
+.main-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	position: relative;
+
+	&-settings {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		z-index: 1;
+	}
+
+	&-image {
+		display: block;
+		border-radius: 50%;
+		margin-bottom: .75rem;
+	}
+
+	&-text {
+		font-weight: 500;
+		color: var(--gray-light-color);
+		margin-bottom: .125rem;
+	}
+
+	&-title {
+		margin-bottom: 1.25rem;
+	}
+
+	&-btn {
+		align-self: stretch;
+	}
+
+	&-link {
+		--_width: 100%;
+
+		--_font-weight: 500;
+		--_color-active: var(--_color);
+		--_background-color: var(--block-bg);
+		--_border-radius: 1rem;
+		--_padding-y: 1rem;
+		--_padding-x: 1rem;
+
+		--_icon-size: 1.5rem;
+		--_icon-color: var(--light-4-color);
+		--_icon-color-active: var(--_icon-color);
+
+		justify-content: space-between;
+
+		.btn-content {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			&-image {
+				display: block;
+				background-color: var(--light-2-color);
+				border-radius: .5rem;
+				padding: .375rem;
+				object-fit: contain;
+			}
+		}
+	}
+}

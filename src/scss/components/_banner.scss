@@ -1,0 +1,68 @@
+.banner {
+	color: var(--light-color);
+	border-radius: 1rem;
+	padding: 1rem;
+	background-image:
+		url('../img/bg/bg-stars.svg'),
+		linear-gradient(135deg, #744eff 0%, #cba5ff 100%);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+
+	* {
+		color: inherit;
+	}
+
+	&-close {
+		position: absolute;
+		top: .75rem;
+		right: .75rem;
+		z-index: 2;
+	}
+
+	&-content {
+		max-width: 12.5rem;
+
+		&-title {
+			margin-bottom: .5rem;
+		}
+
+		&-btn {
+			--_font-size: var(--fs-5);
+			--_color: inherit;
+			--_color-active: var(--_color);
+
+			--_icon-size: .5rem;
+
+			gap: .25rem;
+		}
+
+		&-link {
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+
+			&:active {
+				~ .banner-content-btn {
+					transform: scale(.9375);
+				}
+			}
+		}
+	}
+
+	&-picture {
+		user-select: none;
+		pointer-events: none;
+		position: absolute;
+		top: -.75rem;
+		right: -1rem;
+		transform: rotate(-16deg);
+	}
+
+	&-image {
+		display: block;
+		object-fit: contain;
+	}
+}

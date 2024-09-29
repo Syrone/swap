@@ -3,7 +3,6 @@ const dataHighlights = document.querySelectorAll('[data-highlight]')
 dataHighlights?.forEach((element) => {
   const highlights = element.getAttribute('data-highlight').split('|')
   let content = element.innerHTML
-	console.log(content);
 
   highlights.forEach((highlight) => {
     const regex = new RegExp(`(${highlight})`, 'gi')
