@@ -70,6 +70,8 @@
 		--_field-color: var(--primary-color);
 		--_field-p-color: var(--_field-color);
 
+		pointer-events: none;
+
 		.field {
 			
 			&:focus-visible,
