@@ -81,9 +81,19 @@
 .btn-primary {
 	--_color: var(--light-color);
 	--_background-color: var(--primary-bg);
-	--_border-radius: .75rem;
-	--_padding-y: .5rem;
-	--_padding-x: 1.25rem;
+
+	&[disabled] {
+		--_color: var(--secondary-color);
+		--_background-color: var(--secondary-bg);
+
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
+.btn-light {
+	--_color: var(--primary-color);
+	--_background-color: var(--block-bg);
 
 	&[disabled] {
 		--_color: var(--secondary-color);
@@ -126,14 +136,16 @@
 	--_width: 100%;
 	--_height: 3.125rem;
 	--_font-size: var(--fs-1);
+	--_border-radius: .75rem;
+	--_padding-y: .5rem;
+	--_padding-x: 1.25rem;
 }
 
 .btn-sm {
-	--_height: 1.5rem;
-	--_font-size: .875rem;
-}
-
-.btn-lg {
+	--_width: 100%;
 	--_height: 2.5rem;
-	--_font-size: 1.25rem;
+	--_font-size: var(--fs-base);
+	--_border-radius: .75rem;
+	--_padding-y: .25rem;
+	--_padding-x: 1rem;
 }

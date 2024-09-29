@@ -46,6 +46,20 @@
 				border-bottom: 1px solid var(--border-color);
 			}
 		}
+
+		&-action {
+			color: var(--text-color);
+
+			.content {
+				.icon {
+					--_i-color: var(--light-4-color);
+				}
+			}
+	
+			&:active {
+				color: var(--primary-color);
+			}
+		}
 	}
 }
 
@@ -91,5 +105,44 @@
 				color: var(--light-5-color);
 			}
 		}
+	}
+}
+
+.list-group--settings {
+	--list-group-item-padding-x: 1.25rem;
+
+	.list-group-item {
+		align-items: stretch;
+	}
+
+	.picture {
+		flex-shrink: 0;
+	}
+
+	.image {
+		display: block;
+		object-fit: contain;
+		margin: var(--list-group-item-padding-y) var(--list-group-item-padding-x);
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.icon {
+			--_i-size: 1.25rem;
+
+			margin: 0;
+		}
+	}
+}
+
+.list-disc {
+	margin-block: 2rem;
+	padding-left: 1.25em;
+
+	::marker {
+		color: var(--primary-color);
 	}
 }

@@ -2,6 +2,17 @@
 	min-height: 100%;
 }
 
+.min-vh-80 {
+	min-height: 80vh;
+}
+.d-flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
 .v-centered {
 	display: flex;
 	flex-direction: column;
@@ -12,6 +23,20 @@
 	gap: 1rem;
 }
 
+.gap-2-rem {
+	gap: 2rem;
+}
+
+.mt-base {
+	margin-top: 1rem;
+}
+
 .py-base {
 	padding-block: 1rem;
+}
+
+.hint {
+	font-size: var(--fs-5);
+	color: var(--gray-lighter-color);
+	padding: .5rem 1rem;
 }

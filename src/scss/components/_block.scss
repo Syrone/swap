@@ -45,6 +45,7 @@
 		--_font-weight: 500;
 		--_color-active: var(--_color);
 		--_background-color: var(--block-bg);
+		--_background-color-active: var(--_background-color);
 		--_border-radius: 1rem;
 		--_padding-y: 1rem;
 		--_padding-x: 1rem;
@@ -68,5 +69,105 @@
 				object-fit: contain;
 			}
 		}
+	}
+}
+
+.share-block {
+	flex: 1;
+	background-color: var(--block-bg);
+	margin-inline: calc(var(--container-offset) * -1);
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	padding: 1.25rem var(--container-offset) 0;
+	position: relative;
+	z-index: 1;
+
+	&-banner {
+		color: #fff;
+		background-color: #9759F4;
+		margin: 0 calc(var(--container-offset) * -1) -1rem;
+		padding: 6rem var(--container-offset);
+		position: relative;
+
+		&-picture {
+			&:first-child {
+
+				.share-block-banner-image {
+					left: -2rem;
+					bottom: -2rem;
+					transform: rotate(160deg);
+				}
+			}
+
+			&:nth-child(2) {
+
+				.share-block-banner-image {
+					right: 50%;
+					bottom: -5.5rem;
+					transform: rotate(-160deg) translateX(-50%);
+				}
+			}
+
+			&:last-child {
+				.share-block-banner-image {
+					right: -2.5rem;
+					bottom: -3rem;
+					transform: rotate(-20deg) ;
+				}
+			}
+		}
+
+		&-image {
+			display: block;
+			position: absolute;
+			object-fit: contain;
+		}
+
+		&-bg {
+			background-image: url(../img/bg/bg-stars-2.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			padding-block: 2rem;
+		}
+
+		&-title {
+			color: inherit;
+			text-align: center;
+
+			.icon {
+				--_i-size: 2rem;
+			}
+		}
+	}
+
+	&-picture {
+		display: grid;
+		place-content: center;
+		padding-block: 2rem;
+	}
+
+	&-image {
+		display: block;
+		object-fit: contain;
+	}
+
+	&-title {
+		margin-bottom: 0;
+	}
+
+	&-list {
+		display: grid;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	&-hint {
+		font-size: var(--fs-5);
+		margin-bottom: 2rem;
+	}
+
+	&-btn {
+		margin-top: auto;
 	}
 }
