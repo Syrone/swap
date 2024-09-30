@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="ru" class="page"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="format-detection" content="telephone=no, date=no, address=no, email=no"><title>SwapBot</title><link rel="preload" href="./fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="./fonts/SF-Pro-Display-Semibold.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="css/main.css"><script>(function() {
-      const savedTheme = localStorage.getItem('theme');
+      const themeCookie = document.cookie.split('; ').find(row => row.startsWith('theme='));
+      const savedTheme = themeCookie ? themeCookie.split('=')[1] : null;
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
       }

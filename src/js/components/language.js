@@ -1,7 +1,8 @@
 import i18next from 'i18next'
 import i18nextHttpBackend from 'i18next-http-backend'
+import Cookies from 'js-cookie'
 
-const savedLanguage = localStorage.getItem('i18nextLng') || 'ru'
+const savedLanguage = Cookies.get('i18nextLng') || 'ru'
 
 i18next
 	.use(i18nextHttpBackend)
@@ -60,7 +61,7 @@ switchElements?.forEach((switchElement) => {
 		if (switchType === 'toggle') {
 			const newLang = i18next.language === 'ru' ? 'en' : 'ru'
 			i18next.changeLanguage(newLang, function () {
-				localStorage.setItem('i18nextLng', newLang)
+				Cookies.set('i18nextLng', newLang, { expires: 365 })
 				updateContent()
 				updateLanguageSwitch()
 			})
@@ -70,7 +71,7 @@ switchElements?.forEach((switchElement) => {
 				radio.addEventListener('change', function () {
 					const selectedLanguage = this.getAttribute('data-i18next-language')
 					i18next.changeLanguage(selectedLanguage, function () {
-						localStorage.setItem('i18nextLng', selectedLanguage)
+						Cookies.set('i18nextLng', selectedLanguage, { expires: 365 })
 						updateContent()
 						updateLanguageSwitch()
 					})
