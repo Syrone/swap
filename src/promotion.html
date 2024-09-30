@@ -11,14 +11,14 @@
         <div class="share-block-banner">
           <div class="share-block-banner-bg">
             <h2 class="h1 share-block-banner-title">
-              <span>Розыгрыш 1000</span>
+              <span data-i18next="banner_text_title"></span>
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use>
                 </svg>
               </span>
               <br>
-              <span>Каждый день !</span>
+              <span data-i18next="banner_text_subtitle"></span>
             </h2>
           </div>
           <div>
@@ -41,33 +41,17 @@
         </div>
 
         <div class="share-block d-flex flex-column">
-          <h2 class="share-block-title">
-            Условия розыгрыша
-          </h2>
+          <h2 class="share-block-title" data-i18next="promotion_text_title"></h2>
 
           <ul class="list-disc share-block-list">
-            <li>
-              Подписаться или быть подписанным на наш <a href="#" class="btn btn-link btn-inherit text-underline">Telegram канал.</a>
-            </li>
-            <li>
-              Совершить как минимум один обмен <a href="#" class="btn btn-link btn-inherit text-underline">Star To Ton</a> в течении суток.
-            </li>
-            <li>
-              Нажать кнопку “<a href="#" class="btn btn-link btn-inherit text-underline">участвовать</a>” в низу данной страницы 
-            </li>
+            <li data-i18next="promotion_list_item_1"></li>
+            <li data-i18next="promotion_list_item_2"></li>
+            <li data-i18next="promotion_list_item_3"></li>
           </ul>
 
-          <p class="share-block-hint" data-highlight="Принимая участие|политикой конфиденциальности|обработку ваших данных.">
-            Принимая участие в реферальной системе. Вы Автоматически
-            соглашаетесь с <a href="#" class="btn btn-link btn-inherit text-underline">пользовательским соглашением</a>
-            и политикой конфиденциальности.
-            <br>
-            А также Вы даёте разрешение на обработку ваших данных.
-          </p>
+          <p class="share-block-hint" data-i18next="user_agreement_text_2"></p>
 
-          <button type="button" class="btn btn-base btn-primary share-block-btn">
-            Участвовать
-          </button>
+          <button type="button" class="btn btn-base btn-primary share-block-btn" data-i18next="promotion_btn"></button>
 
           @include('partials/footer.html')
         </div>

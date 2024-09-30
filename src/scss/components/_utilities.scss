@@ -48,6 +48,11 @@
 	transition: color var(--transition-duration) var(--transition-type);
 }
 
+.text-primary {
+	color: var(--primary-color);
+	transition: color var(--transition-duration) var(--transition-type);
+}
+
 .hint {
 	font-size: var(--fs-5);
 	color: var(--gray-lighter-color);
