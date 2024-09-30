@@ -1,12 +1,14 @@
 @import "vars";
+@import "./components/loading";
+
 @import "mixins";
 @import "fonts";
 @import "settings";
 
 @import "./components/container";
 @import "./components/icons";
-@import "./components/typography";
 @import "./components/buttons";
+@import "./components/typography";
 @import "./components/switch";
 @import "./components/fields";
 @import "./components/list-group";

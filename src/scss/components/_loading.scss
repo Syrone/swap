@@ -1,0 +1,48 @@
+
+@keyframes loading {
+	50% {
+		background-color: var(--secondary-light-color);
+		box-shadow: 0 -200px 100px -100px var(--secondary-bg) inset;
+	}
+}
+
+[data-loading-sceleton] {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: inline-block;
+		background-color: var(--secondary-bg);
+		border-radius: 1rem;
+		box-shadow: 0 -200px 100px -120px var(--secondary-light-color) inset;
+		animation: loading 2000ms infinite alternate ease-in-out;
+		position: absolute;
+		inset: -.125rem;
+		z-index: 1000;
+	}
+}
+
+[data-loading-sceleton='text'] {
+	min-width: 5rem;
+	min-height: 1em;
+
+	&::after {
+		border-radius: .5rem;
+	}
+}
+
+[data-loading-sceleton='link'] {
+	min-width: 5rem;
+	min-height: 1em;
+}
+
+[data-loading-sceleton='img'] {
+	&::after {
+		inset: -.25rem;
+	}
+}
+
+[data-loading-sceleton="icon"] {
+	min-width: 1em;
+	min-height: 1em;
+}

@@ -10,7 +10,7 @@
       <div class="container min-h-100 v-centered gap-base py-base">
         <div class="d-flex flex-column gap-base min-vh-80">
           <div class="main-block block">
-            <a href="./settings.html" class="btn btn-settings main-block-settings">
+            <a href="./settings.html" class="btn btn-settings main-block-settings" data-loading-sceleton="icon">
               <span class="icon">
                 <svg>
                   <use xlink:href="img/icons/settings.svg#svg-settings"></use>
@@ -18,18 +18,18 @@
               </span>
             </a>
   
-            <picture class="main-block-picture">
+            <picture class="main-block-picture" data-loading-sceleton="img">
               <source srcset="./img/avatars/image.webp" type="image/webp">
               <img loading="lazy" src="./img/avatars/image.png" class="main-block-image" width="70" height="70" alt="Аватарка">
             </picture>
-            <p class="main-block-text" data-i18next="profile_text_suptitle"></p>
-            <h2 class="main-block-title">
+            <p class="main-block-text" data-loading-sceleton="text" data-i18next="profile_text_suptitle"></p>
+            <h2 class="main-block-title" data-loading-sceleton="text">
               UQCep...XBVj
             </h2>
   
-            <a href="./exchange.html" class="btn btn-base btn-primary main-block-btn" data-i18next="profile_exchange_link"></a>
+            <a href="./exchange.html" class="btn btn-base btn-primary main-block-btn" data-loading-sceleton="button" data-i18next="profile_exchange_link"></a>
           </div>
-          <div class="banner">
+          <div class="banner" data-loading-sceleton="block">
             <button type="button" class="btn btn-icon btn-close banner-close">
               <span class="icon">
                 <svg>
@@ -71,7 +71,7 @@
               <img loading="lazy" src="./img/coin/stars.png" class="banner-image" width="130" height="130" alt="">
             </picture>
           </div>
-          <a href="./history.html" class="btn main-block-link">
+          <a href="./history.html" class="btn main-block-link" data-loading-sceleton="block">
             <span class="btn-content">
               <picture classs="btn-content-picture">
                 <source srcset="./gif/check.gif" type="image/gif">
@@ -87,7 +87,7 @@
               </svg>
             </span>
           </a>
-          <a href="./share.html" class="btn main-block-link">
+          <a href="./share.html" class="btn main-block-link" data-loading-sceleton="block">
             <span class="btn-content">
               <picture class="btn-content-picture">
                 <source srcset="./gif/share.gif" type="image/gif">

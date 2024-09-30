@@ -8,27 +8,29 @@
     @include('partials/header.html')
     <main class="main">
       <div class="container">
-        <picture class="coin-picture">
-          <source srcset="./gif/star-flow.gif" type="image/gif">
-          <source srcset="./img/coin/star-flow.webp" type="image/webp">
-          <img loading="lazy" src="./img/coin/star-flow.png" class="coin-image" width="160" height="160" alt="Coin">
-        </picture>
+        <div class="coin-picture">
+          <picture data-loading-sceleton="img">
+            <source srcset="./gif/star-flow.gif" type="image/gif">
+            <source srcset="./img/coin/star-flow.webp" type="image/webp">
+            <img loading="lazy" src="./img/coin/star-flow.png" class="coin-image" width="160" height="160" alt="Coin">
+          </picture>
+        </div>
         <div class="coin-block block">
-          <h2 class="h1 coin-block-title">
+          <h2 class="h1 coin-block-title" data-loading-sceleton="text">
             StarFlow
           </h2>
-          <p class="coin-block-text" data-i18next="create_account_text_description"></p>
+          <p class="coin-block-text" data-loading-sceleton="text" data-i18next="create_account_text_description"></p>
 
           <form>
-            <div class="fieldset">
+            <div class="fieldset" data-loading-sceleton="input">
               <input type="text" class="field" data-i18next="create_account_input" placeholder="" required>
               <span class="field-blank"></span>
             </div>
   
-            <button type="submit" class="btn btn-base btn-primary" data-i18next="create_account_btn"></button>
+            <button type="submit" class="btn btn-base btn-primary" data-loading-sceleton="button" data-i18next="create_account_btn"></button>
           </form>
         </div>
-        <button type="button" class="btn btn-link coin-block-switch" data-i18next="switch_language" data-i18next-switch="toggle"></button>
+        <button type="button" class="btn btn-link coin-block-switch" data-loading-sceleton="link" data-i18next="switch_language" data-i18next-switch="toggle"></button>
       </div>
 
       @include('partials/modals.html')

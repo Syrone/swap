@@ -8,25 +8,27 @@
     @include('partials/header.html')
     <main class="main">
       <div class="container d-flex flex-column min-h-100">
-        <picture class="share-block-picture">
-          <source srcset="./gif/share.gif" type="image/gif">
-          <source srcset="./img/coin/share.webp" type="image/webp">
-          <img loading="lazy" src="./img/coin/share.png" class="share-block-image" width="180" height="180" alt="Картинка">
-        </picture>
+        <div class="share-block-picture">
+          <picture data-loading-sceleton="img">
+            <source srcset="./gif/share.gif" type="image/gif">
+            <source srcset="./img/coin/share.webp" type="image/webp">
+            <img loading="lazy" src="./img/coin/share.png" class="share-block-image" width="180" height="180" alt="Картинка">
+          </picture>
+        </div>
 
         <div class="share-block d-flex flex-column">
-          <h2 class="share-block-title" data-i18next="share_text_title"></h2>
+          <h2 class="share-block-title" data-loading-sceleton="text" data-i18next="share_text_title"></h2>
 
           <ul class="list-disc share-block-list">
-            <li data-i18next="share_list_item_1"></li>
-            <li data-i18next="share_list_item_2"></li>
-            <li data-i18next="share_list_item_3"></li>
-            <li data-i18next="share_list_item_4"></li>
+            <li data-loading-sceleton="text" data-i18next="share_list_item_1"></li>
+            <li data-loading-sceleton="text" data-i18next="share_list_item_2"></li>
+            <li data-loading-sceleton="text" data-i18next="share_list_item_3"></li>
+            <li data-loading-sceleton="text" data-i18next="share_list_item_4"></li>
           </ul>
 
-          <p class="share-block-hint" data-i18next="user_agreement_text_2"></p>
+          <p class="share-block-hint" data-loading-sceleton="text" data-i18next="user_agreement_text_2"></p>
 
-          <button type="button" class="btn btn-base btn-primary share-block-btn" data-i18next="share_btn"></button>
+          <button type="button" class="btn btn-base btn-primary share-block-btn" data-loading-sceleton="button" data-i18next="share_btn"></button>
 
           @include('partials/footer.html')
         </div>
