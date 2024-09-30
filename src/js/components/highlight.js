@@ -6,7 +6,7 @@ dataHighlights?.forEach((element) => {
 
   highlights.forEach((highlight) => {
     const regex = new RegExp(`(${highlight})`, 'gi')
-    content = content.replace(regex, '<span class="text-body">$1</span>')
+    content = content.replace(regex, '<span class="text-title">$1</span>')
   })
 
   element.innerHTML = content

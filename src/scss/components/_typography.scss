@@ -43,16 +43,3 @@ p {
 		margin-block-start: 1.375rem;
 	}
 }
-
-.text-underline {
-	text-decoration: underline !important;
-}
-
-.text-initial {
-	text-decoration: initial !important;
-}
-
-.text-body {
-	color: var(--text-color);
-	transition: color var(--transition-duration) var(--transition-type);
-}

@@ -19,6 +19,9 @@
 		display: flex;
 		align-items: center;
 		background-color: var(--block-bg);
+		transition-property: background;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-type);
 
 		.icon {
 			--_i-size: 2rem;
@@ -44,6 +47,9 @@
 		&:not(:last-child) {
 			.content {
 				border-bottom: 1px solid var(--border-color);
+				transition-property: border;
+				transition-duration: var(--transition-duration);
+				transition-timing-function: var(--transition-type);
 			}
 		}
 
@@ -53,6 +59,9 @@
 			.content {
 				.icon {
 					--_i-color: var(--light-4-color);
+					transition-property: color;
+					transition-duration: var(--transition-duration);
+					transition-timing-function: var(--transition-type);
 				}
 			}
 	

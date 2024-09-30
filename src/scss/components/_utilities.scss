@@ -35,6 +35,19 @@
 	padding-block: 1rem;
 }
 
+.text-underline {
+	text-decoration: underline !important;
+}
+
+.text-initial {
+	text-decoration: initial !important;
+}
+
+.text-title {
+	color: var(--title-color);
+	transition: color var(--transition-duration) var(--transition-type);
+}
+
 .hint {
 	font-size: var(--fs-5);
 	color: var(--gray-lighter-color);
