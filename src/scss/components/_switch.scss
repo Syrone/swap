@@ -9,13 +9,14 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 1rem;
+	color: var(--title-color);
 	background-color: var(--block-bg);
 	background-clip: padding-box;
 	border: none;
 	border-radius: .75rem;
 	padding: .5rem 1.25rem;
 	overflow: visible;
-	transition-property: background;
+	transition-property: color, background;
 	transition-duration: var(--transition-duration);
 	transition-timing-function: var(--transition-type);
 	position: relative;

@@ -8,13 +8,13 @@
     @include('partials/header.html')
     <main class="main">
       <div class="container min-h-100 v-centered gap-base py-base">
-        <div class="d-flex flex-column gap-2-rem min-vh-80">
+        <form class="d-flex flex-column gap-2-rem min-vh-80">
           <div>
             <h2 class="list-group-title">
               Основные настройки
             </h2>
             <div class="list-reset list-group list-group--settings">
-              <a href="#" class="list-group-item list-group-item-action">
+              <a href="./settings-address.html" class="list-group-item list-group-item-action">
                 <picture class="picture">
                   <source srcset="./img/settings/wallet.webp" type="image/webp">
                   <img loading="lazy" src="./img/settings/wallet.png" class="image" width="32" height="32" alt="Картинка">
@@ -28,7 +28,7 @@
                   </span>
                 </span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action">
+              <a href="./settings-language.html" class="list-group-item list-group-item-action">
                 <picture class="picture">
                   <source srcset="./img/settings/language.webp" type="image/webp">
                   <img loading="lazy" src="./img/settings/language.png" class="image" width="32" height="32" alt="Картинка">
@@ -42,7 +42,7 @@
                   </span>
                 </span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action">
+              <a href="./settings-notice.html" class="list-group-item list-group-item-action">
                 <picture class="picture">
                   <source srcset="./img/settings/notice.webp" type="image/webp">
                   <img loading="lazy" src="./img/settings/notice.png" class="image" width="32" height="32" alt="Картинка">
@@ -63,7 +63,7 @@
             <h2 class="list-group-title">
               Смена темы
             </h2>
-            <div class="list-reset list-group">
+            <div class="list-reset list-group list-group--switch">
               <label class="switch" data-switch-theme="">
                 <input type="checkbox" class="switch-input">
                 <div class="switch-content">
@@ -138,7 +138,7 @@
               <a href="#" class="btn btn-link btn-inherit text-underline">Подробнее</a>
             </p>
           </div>
-        </div>
+        </form>
       </div>
 
       @include('partials/modals.html')

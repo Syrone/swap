@@ -42,7 +42,7 @@ formElements?.forEach((form) => {
 				allFilled = false
 			}
 		})
-		buttonSubmit.disabled = !allFilled
+		buttonSubmit ? buttonSubmit.disabled = !allFilled : false
 	}
 
 	checkFields()

@@ -18,8 +18,9 @@
 	&-item {
 		display: flex;
 		align-items: center;
+		color: var(--title-color);
 		background-color: var(--block-bg);
-		transition-property: background;
+		transition-property: background, color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-type);
 
@@ -54,7 +55,7 @@
 		}
 
 		&-action {
-			color: var(--text-color);
+			color: var(--title-color);
 
 			.content {
 				.icon {
@@ -147,9 +148,69 @@
 	}
 }
 
+.list-group--switch {
+	gap: 1rem;
+}
+
+.list-group--checkbox-radio {
+	--list-group-item-padding-y: .75rem;
+	--list-group-item-padding-x: 1.25rem;
+
+	.list-group-item {
+		padding-left: var(--list-group-item-padding-x);
+		position: relative;
+	}
+
+	.checkbox-radio {
+		appearance: none;
+		background-color: transparent;
+		vertical-align: top;
+		margin: 0;
+		border: 0;
+		padding: 0;
+		outline: none;
+		pointer-events: none;
+		user-select: none;
+		position: absolute;
+		inset: 0;
+
+		&:checked {
+
+			~ .content {
+
+				.icon {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+
+		.icon {
+			--_i-size: 1.25rem;
+			--_i-color: var(--primary-color);
+
+			margin: 0;
+			opacity: 0;
+			transition-property: opacity;
+			transition-duration: var(--transition-duration);
+			transition-timing-function: var(--transition-type);
+		}
+	}
+}
+
 .list-disc {
+	color: var(--title-color);
 	margin-block: 2rem;
 	padding-left: 1.25em;
+	transition-property: color;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: var(--transition-type);
 
 	::marker {
 		color: var(--primary-color);

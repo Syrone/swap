@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container min-h-100 v-centered gap-base py-base">
+        <form class="d-flex flex-column gap-2-rem min-vh-80">
+          <div>
+            <div class="list-reset list-group list-group--checkbox-radio">
+              <label class="list-group-item">
+                <input type="radio" name="address" class="checkbox-radio" data-i18next-language="en">
+                <span class="content">
+                  English
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/check.svg#svg-check"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+              <label class="list-group-item">
+                <input type="radio" name="address" class="checkbox-radio" data-i18next-language="ru">
+                <span class="content">
+                  Русский
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/check.svg#svg-check"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

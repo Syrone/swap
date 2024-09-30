@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container min-h-100 v-centered gap-base py-base">
+        <form class="d-flex flex-column gap-2-rem min-vh-80">
+          <div>
+            <div class="list-reset list-group list-group--checkbox-radio">
+              <label class="list-group-item">
+                <input type="radio" name="address" class="checkbox-radio">
+                <span class="content">
+                  UQCep...XBVj
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/check.svg#svg-check"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+              <label class="list-group-item">
+                <input type="radio" name="address" class="checkbox-radio" checked>
+                <span class="content">
+                  WDCpw...XMPq
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/check.svg#svg-check"></use>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+              <label class="list-group-item">
+                <input type="radio" name="address" class="checkbox-radio">
+                <span class="content">
+                  WRCfs...FADi
+                  <span class="icon">
+                    <svg id="svg-check" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.69434 18.4692C8.25163 18.4692 7.87533 18.2783 7.56543 17.8965L3.26562 12.6006C3.14388 12.4567 3.05534 12.3156 3 12.1772C2.9502 12.0389 2.92529 11.895 2.92529 11.7456C2.92529 11.4136 3.03597 11.1396 3.25732 10.9238C3.47868 10.708 3.75814 10.6001 4.0957 10.6001C4.47754 10.6001 4.7985 10.7633 5.05859 11.0898L8.66113 15.6553L15.6919 4.51562C15.8358 4.29427 15.9852 4.13932 16.1401 4.05078C16.2951 3.95671 16.4888 3.90967 16.7212 3.90967C17.0588 3.90967 17.3354 4.01481 17.5513 4.2251C17.7671 4.43538 17.875 4.70378 17.875 5.03027C17.875 5.16309 17.8529 5.2959 17.8086 5.42871C17.7643 5.56152 17.6951 5.69987 17.6011 5.84375L9.83154 17.8633C9.56592 18.2673 9.18685 18.4692 8.69434 18.4692Z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

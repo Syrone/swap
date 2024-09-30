@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container min-h-100 v-centered gap-base py-base">
+        <form class="d-flex flex-column gap-2-rem min-vh-80">
+          <div>
+            <div class="list-reset list-group list-group--switch">
+              <label class="switch">
+                <input type="checkbox" class="switch-input" checked>
+                <div class="switch-content">
+                  Общие
+                </div>
+                <div class="switch-toggle">
+                  <div class="switch-handle"></div>
+                </div>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="switch-input" checked>
+                <div class="switch-content">
+                  Новости
+                </div>
+                <div class="switch-toggle">
+                  <div class="switch-handle"></div>
+                </div>
+              </label>
+              <label class="switch">
+                <input type="checkbox" class="switch-input" checked>
+                <div class="switch-content">
+                  Акции
+                </div>
+                <div class="switch-toggle">
+                  <div class="switch-handle"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>
