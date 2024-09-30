@@ -8,7 +8,7 @@ i18next
 	.init({
 		lng: savedLanguage,
 		backend: {
-			loadPath: '/locales/{{lng}}.json'
+			loadPath: './locales/{{lng}}.json'
 		}
 	}, function (err, t) {
 		updateContent()
@@ -78,4 +78,8 @@ switchElements?.forEach((switchElement) => {
 			})
 		}
 	})
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+	updateLanguageSwitch()
 })
