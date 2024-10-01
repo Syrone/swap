@@ -37,6 +37,10 @@
 			--_icon-size: .5rem;
 
 			gap: .25rem;
+
+			.icon {
+				transform: translateY(.05em);
+			}
 		}
 
 		&-link {

@@ -44,7 +44,9 @@
 
   // background
   --body-bg: #F2F2F7;
+  --body-inverse-bg: #F2F2F7;
   --block-bg: #FFFFFF;
+  --block-inverse-bg: #FFFFFF;
   --input-bg: #EEEEEF;
   --primary-bg: var(--primary-color);
   --secondary-bg: #EEEEEF;
@@ -74,7 +76,9 @@
 
     // background
     --body-bg: #000000;
+    --body-inverse-bg: #1C1C1C;
     --block-bg: #1C1C1C;
+    --block-inverse-bg: #000000;
     --input-bg: #0C0C0C;
     --primary-bg: var(--primary-color);
     --secondary-bg: #151515;

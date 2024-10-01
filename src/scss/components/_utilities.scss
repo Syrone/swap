@@ -53,6 +53,16 @@
 	transition: color var(--transition-duration) var(--transition-type);
 }
 
+.bg-body-inverse {
+	background-color: var(--body-inverse-bg);
+	transition: background var(--transition-duration) var(--transition-type);
+}
+
+.bg-block-inverse {
+	background-color: var(--block-inverse-bg);
+	transition: background var(--transition-duration) var(--transition-type);
+}
+
 .hint {
 	font-size: var(--fs-5);
 	color: var(--gray-lighter-color);
