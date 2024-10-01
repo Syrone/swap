@@ -165,7 +165,9 @@
 
 	&-hint {
 		font-size: var(--fs-5);
+		color: var(--light-6-color);
 		margin-bottom: 2rem;
+		transition: color var(--transition-duration) var(--transition-type);
 	}
 
 	&-btn {
