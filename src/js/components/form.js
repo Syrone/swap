@@ -3,7 +3,7 @@ const fieldsetIcons = document.querySelectorAll('.fieldset--icon')
 const numberFields = document.querySelectorAll('[data-required]')
 const inputIdFields = document.querySelectorAll('[data-input-id]')
 
-const conversionRate = 1.2 / 500
+const conversionRate = 0.00074
 
 const updateFieldsetIcon = (input) => {
 	const fieldset = input.closest('.fieldset--icon')
