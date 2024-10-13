@@ -96,6 +96,10 @@
 			&.success {
 				color: var(--success-color);
 			}
+			
+			&.process {
+				color: var(--danger-color);
+			}
 		}
 
 		&-value {
