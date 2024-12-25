@@ -3,10 +3,10 @@
   "create_account_input": "Вставьте адрес вашего TON кошелька",
   "create_account_btn": "Подключить кошелёк",
   "append_wallet_text": "Добавить кошелёк",
-  "exchange_ton_text_description": "<span class='text-title'>TON</span> Придут на <span class='text-title'>адрес</span> <br> который вы указали при регистрации",
+  "exchange_ton_text_description": "<span class='text-title'>TON</span> Придут на <span class='text-title'>адрес</span> <br> который вы указали в настроках",
   "exchange_ton_input": "Введите кол-во Star",
   "exchange_ton_accordion_item_1": "Из-за слишком большого количества операций, обмен <span class='text-title'>Star to Ton</span> временно приостановлен. Мы уже решаем проблему. В скором времени мы вернёмся)",
-  "exchange_usdt_text_description": "<span class='text-title'>USDT (TON)</span> Придут на <span class='text-title'>адрес</span> <br> который вы указали при регистрации",
+  "exchange_usdt_text_description": "<span class='text-title'>USDT (TON)</span> Придут на <span class='text-title'>адрес</span> <br> который вы указали в настроках",
   "exchange_usdt_input": "Введите кол-во Star",
   "exchange_form_submit": "Подтвердить покупку",
   "history_list_title": "история обмена",
@@ -69,6 +69,7 @@
   "rating_button": "Увеличить рейтинг",
   "leaderboard_title": "Таблица лидеров",
   "leaderboard_text": "Прокачивай рейтинг и поднимайся <br> в таблице лидеров",
+  "accordion_error_button": "Обмен недоступен",
   "switch_language": "Continue in English",
 	"footer_textfooter_text_copy_copy": "Для начала прочитайте<br><a href='https://drive.google.com/file/d/1A8MceppErI_q4wA78k8Hwzsr2DxOkEKW' target='_blank' class='btn btn-inherit footer-copy-link text-underline'>Пользовательское соглашение</a>"
 }

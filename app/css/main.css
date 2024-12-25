@@ -1350,6 +1350,7 @@ p + p {
   object-fit: contain;
 }
 .main-block-footer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1853,3 +1854,4 @@ p + p {
   -webkit-transition-timing-function: var(--transition-type);
   transition-timing-function: var(--transition-type);
 }
+/*# sourceMappingURL=main.css.map */
