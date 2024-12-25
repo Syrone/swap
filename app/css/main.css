@@ -1806,6 +1806,11 @@ p + p {
   gap: 1rem;
   text-align: start;
 }
+.accordion-button:active {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
 .accordion-button-icon {
   --_i-size: 1.25rem;
   --_i-color: var(--light-8-color);
