@@ -1,5 +1,6 @@
 :root {
   --font-family: "SF-Pro", sans-serif;
+  --font-secondary: "SF-Pro-Rounded", sans-serif;
   --content-width: 48rem;
   --container-offset: 1rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -169,21 +170,28 @@
 /* stylelint-disable value-keyword-case */
 @font-face {
   font-family: "SF-Pro";
-  src: url("../fonts/../fonts/SF-Pro-Display-Regular.woff2") format("woff2");
+  src: url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "SF-Pro";
-  src: url("../fonts/../fonts/SF-Pro-Display-Medium.woff2") format("woff2");
+  src: url("../fonts/SF-Pro-Display-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: "SF-Pro";
-  src: url("../fonts/../fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
+  src: url("../fonts/SF-Pro-Display-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF-Pro-Rounded";
+  src: url("../fonts/SF-Pro-Rounded-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -1149,6 +1157,7 @@ p + p {
   padding-bottom: 1rem;
 }
 .list-group--rating .list-group-item .value {
+  font-family: var(--font-secondary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1227,6 +1236,10 @@ p + p {
 .list-group--leaderboard .list-group-item .rating .icon {
   --_i-size: .625rem;
   margin: 0;
+}
+.list-group--leaderboard .list-group-item .position {
+  font-family: var(--font-secondary);
+  text-align: right;
 }
 
 .list-disc {
@@ -1854,3 +1867,4 @@ p + p {
   -webkit-transition-timing-function: var(--transition-type);
   transition-timing-function: var(--transition-type);
 }
+/*# sourceMappingURL=main.css.map */

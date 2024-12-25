@@ -228,6 +228,7 @@
 		}
 
 		.value {
+			font-family: var(--font-secondary);
 			display: flex;
 			align-items: center;
 			gap: .375rem;
@@ -301,6 +302,11 @@
 
 				margin: 0;
 			}
+		}
+
+		.position {
+			font-family: var(--font-secondary);
+			text-align: right;
 		}
 	}
 }

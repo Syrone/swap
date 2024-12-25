@@ -1,6 +1,7 @@
 :root {
   // base
   --font-family: "SF-Pro", sans-serif;
+  --font-secondary: "SF-Pro-Rounded", sans-serif;
   --content-width: 48rem;
   --container-offset: 1rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
