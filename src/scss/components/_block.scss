@@ -12,11 +12,25 @@
 	text-align: center;
 	position: relative;
 
-	&-settings {
+	&-header {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		pointer-events: none;
 		position: absolute;
 		top: 1rem;
 		left: 1rem;
+		right: 1rem;
 		z-index: 1;
+
+		.btn {
+			pointer-events: auto;
+		}
+	}
+
+	&-rating {
+		display: flex;
+		gap: .375rem;
 	}
 
 	&-image {
@@ -25,18 +39,25 @@
 		margin-bottom: .75rem;
 	}
 
-	&-text {
-		font-weight: 500;
-		color: var(--gray-light-color);
+	&-fieldset {
+		--_field-fs: 1.25rem;
+		--_field-fw: 500;
+
 		margin-bottom: .125rem;
+
+		.field {
+			text-align: center;
+		}
 	}
 
 	&-title {
+		color: var(--light-7-color);
 		margin-bottom: 1.25rem;
 	}
 
 	&-btn {
-		align-self: stretch;
+		white-space: nowrap;
+		flex: 1;
 	}
 
 	&-link {
@@ -70,6 +91,12 @@
 				object-fit: contain;
 			}
 		}
+	}
+
+	&-footer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
 	}
 }
 
@@ -172,5 +199,96 @@
 
 	&-btn {
 		margin-top: auto;
+	}
+}
+
+.rating-block {
+	flex: 1;
+	background-color: var(--body-bg);
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	padding: 1rem var(--container-offset);
+	position: relative;
+
+	&,
+	&-picture {
+		margin-inline: calc(var(--container-offset) * -1);
+	}
+
+	&-picture {
+		display: flex;
+		justify-content: center;
+		background-color: var(--primary-color-500);
+		padding-block: 3rem;
+		margin-bottom: -1.75rem;
+		position: relative;
+
+		&-bg {
+			background-image: url(../img/bg/bg-stars-3.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			pointer-events: none;
+			user-select: none;
+			position: absolute;
+			inset: 3rem 0 3rem;
+		}
+	}
+
+	&-header {
+		text-align: center;
+		background-color: var(--block-bg);
+		margin-bottom: 1rem;
+		border-radius: 1rem;
+		padding: 1rem;
+	}
+
+	&-title {
+		font-size: 1.25rem;
+		margin-bottom: .25rem;
+	}
+
+	&-text {
+		font-size: 1.125rem;
+		letter-spacing: -.02em;
+		color: var(--gray-light-color);
+	}
+
+	&-footer {
+		background-color: var(--block-bg);
+		margin-top: 1rem;
+		border-radius: 1rem;
+		padding: 1rem;
+	}
+}
+
+.leaderboard-block {
+
+	&-picture {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+
+	&-title,
+	&-text {
+		letter-spacing: -.02em;
+		text-align: center;
+	}
+
+	&-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		line-height: 1.25;
+		margin-bottom: .25rem;
+	}
+
+	&-text {
+		font-size: 1.125rem;
+		color: var(--gray-light-color);
+	}
+
+	&-footer {
+		margin-top: 1.5rem;
 	}
 }

@@ -21,7 +21,7 @@
 	--_field-p-fs: var(--_field-fs);
 	--_field-p-fw: var(--_field-fw);
 	--_field-p-lh: var(--_field-lh);
-	--_field-p-color: var(--secondary-light-color);
+	--_field-p-color: var(--_field-color);
 
 	width: 100%;
 	position: relative;
@@ -48,6 +48,7 @@
 
 		--_field-fs: var(--fs-4);
 		--_field-p-fw: 400;
+		--_field-p-color: var(--secondary-light-color);
 
 		.field {
 
@@ -68,7 +69,7 @@
 		--_field-padding: .59375rem 1.5rem;
 		--_field-p-fs: var(--fs-base);
 		--_field-color: var(--primary-color);
-		--_field-p-color: var(--_field-color);
+		--_field-p-color: var(--secondary-lighter-color);
 
 		pointer-events: none;
 
@@ -83,6 +84,14 @@
 				}
 			}
 		}
+	}
+
+	&--plaintext {
+		--_field-height: auto;
+		--_field-bg: transparent;
+		--_field-border: none;
+		--_field-radius: 0rem;
+		--_field-padding: 0rem;
 	}
 }
 

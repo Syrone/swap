@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container">
+        <div class="coin-picture">
+          <picture data-loading-sceleton="img">
+            <source srcset="./gif/ton.gif" type="image/gif">
+            <source srcset="./img/coin/ton.webp" type="image/webp">
+            <img loading="lazy" src="./img/coin/ton.png" class="coin-image" width="160" height="160" alt="Coin">
+          </picture>
+        </div>
+        <div class="coin-block block">
+          <h2 class="h1 coin-block-title" data-loading-sceleton="text">
+            Star To USDT
+          </h2>
+          <p class="coin-block-text" data-loading-sceleton="text" data-i18next="exchange_text_description"></p>
+
+          <form>
+            <div class="form-group">
+              <div class="fieldset fieldset--icon fieldset--star" data-loading-sceleton="input">
+                <input type="text" class="field" placeholder="Введите кол-во Star" data-required="number" data-input-id="usdt" data-conversion-rate="0.00074" data-i18next="exchange_input" required>
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div class="fieldset fieldset--icon fieldset--ton" data-loading-sceleton="input">
+                <input type="text" class="field" placeholder="0.00 USDT" readonly data-input-target="usdt">
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-usdt.svg#svg-coin-usdt"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-base btn-primary" data-loading-sceleton="button" data-i18next="exchange_form_submit"></button>
+          </form>
+        </div>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

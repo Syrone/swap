@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body bg-body-inverse">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="container d-flex flex-column min-h-100">
+        <div class="rating-block-picture">
+          <span class="rating-block-picture-bg"></span>
+          <picture data-loading-sceleton="img">
+            <source srcset="./gif/rating.gif" type="image/gif">
+            <source srcset="./img/coin/rating.webp" type="image/webp">
+            <img loading="lazy" src="./img/coin/rating.png" class="share-block-image" width="180" height="180" alt="Картинка">
+          </picture>
+        </div>
+
+        <div class="rating-block d-flex flex-column">
+          <div class="rating-block-header">
+            <h2 class="rating-block-title" data-i18next="rating_title"></h2>
+
+            <p class="rating-block-text" data-i18next="rating_text"></p>
+          </div>
+
+          <div class="d-flex flex-column gap-base">
+            <div>
+              <h2 class="list-group-title" data-i18next="rating_list_rating_title"></h2>
+              <ul class="list-reset list-group list-group--rating">
+                <li class="list-group-item">
+                  <span class="value">
+                    1,425
+                    <img loading="lazy" src="img/icons/rating-2.svg" class="image" width="24" height="24" alt="icon">
+                  </span>
+                  <span class="name" data-i18next="rating_list_rating_item_1"></span>
+                </li>
+                <li class="list-group-item">
+                  <span class="value">
+                    437
+                    <img loading="lazy" src="img/icons/rating-2.svg" class="image" width="24" height="24" alt="icon">
+                  </span>
+                  <span class="name" data-i18next="rating_list_rating_item_2"></span>
+                </li>
+              </ul>
+              <p class="hint" data-i18next="rating_list_rating_hint"></p>
+            </div>
+
+            <div>
+              <h2 class="list-group-title" data-i18next="rating_list_limit_title"></h2>
+              <ul class="list-reset list-group list-group--rating">
+                <li class="list-group-item">
+                  <span class="value">
+                    20,000
+                    <img loading="lazy" src="img/icons/star-gold.webp" class="image" width="24" height="24" alt="icon">
+                  </span>
+                  <span class="name" data-i18next="rating_list_limit_item_1"></span>
+                </li>
+                <li class="list-group-item">
+                  <span class="value">
+                    12,500
+                    <img loading="lazy" src="img/icons/star-gold.webp" class="image" width="24" height="24" alt="icon">
+                  </span>
+                  <span class="name" data-i18next="rating_list_limit_item_2"></span>
+                </li>
+              </ul>
+              <p class="hint" data-i18next="rating_list_limit_hint"></p>
+            </div>
+          </div>
+
+          <div class="rating-block-footer">
+            <button type="button" class="btn btn-base btn-primary">
+              <span data-i18next="rating_button"></span>
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

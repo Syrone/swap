@@ -42,14 +42,14 @@
 	cursor: pointer;
 	outline: none;
 
-	.icon {
+	.icon:not(.accordion-button-icon) {
 		width: var(--_icon-size);
 		height: var(--_icon-size);
 		color: var(--_icon-color);
 		flex-shrink: 0;
 	}
 
-	&:is(:focus-visible, :active, .is-active) {
+	&:is(:active, .is-active) {
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
@@ -86,6 +86,20 @@
 		--_color: var(--secondary-color);
 		--_background-color: var(--secondary-bg);
 
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
+.btn-primary-300 {
+	--_color: var(--primary-color-500);
+	--_background-color: var(--primary-color-200);
+
+	&[disabled] {
+		--_color: var(--primary-color-500);
+		--_background-color: var(--primary-color-200);
+
+		opacity: .5;
 		pointer-events: none;
 		user-select: none;
 	}
@@ -132,6 +146,63 @@
 	backdrop-filter: blur(10px);
 }
 
+.btn-star-flow {
+	--_width: 1.75rem;
+	--_height: 1.75rem;
+	--_border-radius: .375rem;
+
+	flex-shrink: 0;
+	background-image: radial-gradient( circle at 0% 50%, var(--purple-200) 0%, var(--purple-600) 100% );
+	position: relative;
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: var(--_border-radius);
+		padding: .25rem;
+		background-image: linear-gradient( to right, var(--purple-100) 0%, var(--purple-400) 100% );
+		user-select: none;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: padding var(--_transition-duration) var(--_transition-type);
+
+		> * {
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				opacity: 0;
+				position: absolute;
+			}
+		}
+	}
+
+	&:is(:active, .is-active) {
+
+		.content {
+			padding: .32rem;
+
+			> * {
+
+				&:nth-child(1),
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:nth-child(3) {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&:active {
+		transform: none;
+	}
+}
+
 .btn-base {
 	--_width: 100%;
 	--_height: 3.125rem;
@@ -141,6 +212,19 @@
 	--_padding-x: 1.25rem;
 }
 
+.btn-xs {
+	--_width: 100%;
+	--_height: 1.75rem;
+	--_font-size: .9375rem;
+	--_border-radius: .5rem;
+	--_padding-y: .25rem;
+	--_padding-x: .375rem;
+
+	--_icon-size: .75rem;
+
+	gap: .125rem;
+}
+
 .btn-sm {
 	--_width: 100%;
 	--_height: 2.5rem;
@@ -148,4 +232,26 @@
 	--_border-radius: .75rem;
 	--_padding-y: .25rem;
 	--_padding-x: 1rem;
+}
+
+
+
+[data-theme="dark"] {
+
+	.btn-star-flow {
+
+		.content {
+
+			> * {
+
+				&:nth-child(1) {
+					opacity: 0;
+				}
+	
+				&:nth-child(2) {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }

@@ -10,24 +10,59 @@
       <div class="container min-h-100 v-centered gap-base py-base">
         <div class="d-flex flex-column gap-base min-vh-80">
           <div class="main-block block">
-            <a href="./settings.html" class="btn btn-settings main-block-settings" data-loading-sceleton="icon">
-              <span class="icon">
-                <svg>
-                  <use xlink:href="img/icons/settings.svg#svg-settings"></use>
-                </svg>
-              </span>
-            </a>
+            <div class="main-block-header">
+              <a href="./settings.html" class="btn btn-settings main-block-settings" data-loading-sceleton="icon">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/settings.svg#svg-settings"></use>
+                  </svg>
+                </span>
+              </a>
+
+              <div class="main-block-rating">
+                <a href="./rating.html" class="btn btn-xs btn-primary-300">
+                  1,425
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                    </svg>
+                  </span>
+                </a>
+
+                <button type="button" class="btn btn-star-flow">
+                  <span class="content">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/star-pixel.svg#svg-star-pixel"></use>
+                      </svg>
+                    </span>
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/star-pixel-dark.svg#svg-star-pixel-dark"></use>
+                      </svg>
+                    </span>
+                    <img loading="lazy" src="gif/star-pixel-gif.gif" class="image" width="16" height="16" alt="Star Pixel">
+                  </span>
+                </button>
+              </div>
+            </div>
   
             <picture class="main-block-picture" data-loading-sceleton="img">
               <source srcset="./img/avatars/image.webp" type="image/webp">
               <img loading="lazy" src="./img/avatars/image.png" class="main-block-image" width="70" height="70" alt="Аватарка">
             </picture>
-            <p class="main-block-text" data-loading-sceleton="text" data-i18next="profile_text_suptitle"></p>
+            <div class="fieldset fieldset--plaintext main-block-fieldset" data-loading-sceleton="input">
+              <input type="text" class="field" data-i18next="profile_input_name">
+            </div>
             <h2 class="main-block-title" data-loading-sceleton="text">
               UQCep...XBVj
             </h2>
   
-            <a href="./exchange.html" class="btn btn-base btn-primary main-block-btn" data-loading-sceleton="button" data-i18next="profile_exchange_link"></a>
+            <div class="main-block-footer">
+              <a href="./exchange-ton.html" class="btn btn-base btn-primary main-block-btn" data-loading-sceleton="button" data-i18next="profile_exchange_star_to_ton_link"></a>
+              <a href="./exchange-usdt.html" class="btn btn-base btn-primary main-block-btn" data-loading-sceleton="button" data-i18next="profile_exchange_star_to_usdt_link"></a>
+            </div>
           </div>
           <div class="banner" data-loading-sceleton="block">
             <button type="button" class="btn btn-icon btn-close banner-close">
@@ -71,6 +106,22 @@
               <img loading="lazy" src="./img/coin/stars.png" class="banner-image" width="130" height="130" alt="">
             </picture>
           </div>
+          <a href="./leaderboard.html" class="btn main-block-link" data-loading-sceleton="block">
+            <span class="btn-content">
+              <picture classs="btn-content-picture">
+                <source srcset="./gif/leaderboard.gif" type="image/gif">
+                <source srcset="./img/coin/leaderboard.webp" type="image/webp">
+                <img loading="lazy" src="./img/coin/leaderboard.png" class="btn-content-image" width="44" height="44" alt="Картинка">
+              </picture>
+  
+              <span data-i18next="profile_leaderboard_link"></span>
+            </span>
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/right-arrow-b.svg#svg-right-arrow-b"></use>
+              </svg>
+            </span>
+          </a>
           <a href="./history.html" class="btn main-block-link" data-loading-sceleton="block">
             <span class="btn-content">
               <picture classs="btn-content-picture">

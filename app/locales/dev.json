@@ -9,6 +9,8 @@
   "history_list_item_title": "Обмен Star to TON",
   "history_list_item_date": "Обмен Star to TON",
   "history_list_item_success": "Успешно",
+  "settings_other_list_item_add_to_home_screen": "Добавить на экран Домой",
+  "daily_report": "Отчёт (тест)",
   "history_list_item_canceled": "Отменено",
   "profile_text_suptitle": "Ваш адрес TON",
   "profile_exchange_link": "Обменять Star To TON",
@@ -18,9 +20,9 @@
   "profile_history_link": "История обмена",
   "profile_share_link": "Реферальная система",
   "promotion_text_title": "Условия розыгрыша",
-  "promotion_list_item_1": "Подписаться или быть подписанным на наш <a href='#' class='btn btn-link btn-inherit text-underline'>Telegram канал.</a>",
-  "promotion_list_item_2": "Совершить как минимум один обмен <span class='text-primary'>Star To Ton</span> в течении суток.",
-  "promotion_list_item_3": "Нажать кнопку “<span class='text-primary'>участвовать</span>” в низу данной страницы",
+  "promotion_list_item_1": "Подписаться или быть подписанным на наш <a href='https://t.me/TheStarFlow' class='btn btn-link btn-inherit text-underline'>Telegram канал.</a>",
+  "promotion_list_item_2": "Перейти на <a href='https://t.me/TheStarFlow' class='btn btn-link btn-inherit text-underline'>пост</a> с розыгрышем\nи нажать кнопку участвовать",
+
   "promotion_btn": "Участвовать",
   "notice_text_all": "Общие",
   "notice_text_news": "Новости",
@@ -46,5 +48,5 @@
   "share_list_item_4": "Более подробно почитать про реферальную систему можете <a href='#' class='btn btn-link btn-inherit text-underline'>Тут.</a>",
   "share_btn": "Скопировать свою ссылку",
   "switch_language": "Continue in English",
-	"footer_text_copy": "Для начала прочитайте<br><a href='#' class='btn btn-inherit footer-copy-link text-underline'>Пользовательское соглашение</a>"
+	"footer_text_copy": "Для начала прочитайте<br><a href='https://drive.google.com/file/d/1A8MceppErI_q4wA78k8Hwzsr2DxOkEKW' target='_blank' class='btn btn-inherit footer-copy-link text-underline'>Пользовательское соглашение</a>"
 }

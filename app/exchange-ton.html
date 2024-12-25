@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>SwapBot</title>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function() {
+      const themeCookie = document.cookie.split('; ').find(row => row.startsWith('theme='));
+      const savedTheme = themeCookie ? themeCookie.split('=')[1] : null;
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    })();
+  </script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container"></div>
+</header>
+
+    <main class="main">
+      <div class="container">
+        <div class="coin-picture">
+          <picture data-loading-sceleton="img">
+            <source srcset="./gif/ton.gif" type="image/gif">
+            <source srcset="./img/coin/ton.webp" type="image/webp">
+            <img loading="lazy" src="./img/coin/ton.png" class="coin-image" width="160" height="160" alt="Coin">
+          </picture>
+        </div>
+        <div class="coin-block block">
+          <h2 class="h1 coin-block-title" data-loading-sceleton="text">
+            Star To TON
+          </h2>
+          <p class="coin-block-text" data-loading-sceleton="text" data-i18next="exchange_ton_text_description"></p>
+
+          <form>
+            <div class="form-group">
+              <div class="fieldset fieldset--icon fieldset--star" data-loading-sceleton="input">
+                <input type="text" class="field" placeholder="Введите кол-во Star" data-required="number" data-input-id="ton" data-conversion-rate="0.00074" data-i18next="exchange_ton_input" required>
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+              <div class="fieldset fieldset--icon fieldset--ton" data-loading-sceleton="input">
+                <input type="text" class="field" placeholder="0.00 TON" readonly data-input-target="ton">
+                <span class="field-blank">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/coin-ton.svg#svg-coin-ton"></use>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-base btn-primary" data-loading-sceleton="button" data-i18next="exchange_form_submit"></button>
+          </form>
+        </div>
+
+        <div class="accordion" data-only-one="true">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <button type="button" class="btn accordion-button">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/error.svg#svg-error"></use>
+                  </svg>
+                </span>
+
+                Обмен недоступен
+
+                <span class="icon accordion-button-icon">
+                  <svg>
+                    <use xlink:href="img/icons/bottom-arrow.svg#svg-bottom-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p data-i18next="exchange_ton_accordion_item_1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>

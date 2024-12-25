@@ -3,8 +3,6 @@ const fieldsetIcons = document.querySelectorAll('.fieldset--icon')
 const numberFields = document.querySelectorAll('[data-required]')
 const inputIdFields = document.querySelectorAll('[data-input-id]')
 
-const conversionRate = 0.00074
-
 const updateFieldsetIcon = (input) => {
 	const fieldset = input.closest('.fieldset--icon')
 	if (fieldset) {
@@ -61,23 +59,25 @@ fieldsetIcons?.forEach((element) => {
 })
 
 inputIdFields.forEach((inputIdField) => {
-	const inputId = inputIdField.getAttribute('data-input-id')
+  const inputId = inputIdField.getAttribute('data-input-id')
 
-	const inputTargetField = document.querySelector(`[data-input-target="${inputId}"]`)
+  const inputTargetField = document.querySelector(`[data-input-target="${inputId}"]`)
 
-	if (inputTargetField) {
-		inputIdField.addEventListener('input', () => {
-			const inputValue = parseFloat(inputIdField.value)
-			
-			if (isNaN(inputValue)) {
-				inputTargetField.value = ''
-			} else {
-				const convertedValue = (inputValue * conversionRate).toFixed(1)
-				inputTargetField.value = convertedValue
-			}
+  if (inputTargetField) {
+    inputIdField.addEventListener('input', () => {
+      const inputValue = parseFloat(inputIdField.value)
 
-			updateFieldsetIcon(inputIdField)
+      const conversionRate = parseFloat(inputIdField.getAttribute('data-conversion-rate')) || 0.5
+
+      if (isNaN(inputValue)) {
+        inputTargetField.value = ''
+      } else {
+        const convertedValue = (inputValue * conversionRate).toFixed(1)
+        inputTargetField.value = convertedValue
+      }
+
+      updateFieldsetIcon(inputIdField)
       updateFieldsetIcon(inputTargetField)
-		})
-	}
+    })
+  }
 })

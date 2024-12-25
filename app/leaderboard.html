@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>SwapBot</title>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function() {
+      const themeCookie = document.cookie.split('; ').find(row => row.startsWith('theme='));
+      const savedTheme = themeCookie ? themeCookie.split('=')[1] : null;
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    })();
+  </script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container"></div>
+</header>
+
+    <main class="main">
+      <div class="container min-h-100 v-centered gap-base py-base">
+        <div class="d-flex flex-column gap-base min-vh-80">
+          <div class="leaderboard-block block">
+            <div class="leaderboard-block-picture">
+              <picture>
+                <source srcset="gif/leaderboard.gif" type="image/gif">
+                <source srcset="img/coin/leaderboard.webp" type="image/webp">
+                <img loading="lazy" src="img/coin/leaderboard.png" class="image" width="128" height="128" alt="Leaderboard">
+              </picture>
+            </div>
+
+            <h2 class="leaderboard-block-title" data-i18next="leaderboard_title"></h2>
+            <p class="leaderboard-block-text" data-i18next="leaderboard_text"></p>
+
+            <div class="leaderboard-block-footer">
+              <button type="button" class="btn btn-base btn-primary">
+                <span data-i18next="rating_button"></span>
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <ul class="list-reset list-group list-group--leaderboard">
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-1.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-1.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Dezhe111
+                  </div>
+                  <div class="rating">
+                    1,425
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  #6
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-2.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-2.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Pepe
+                  </div>
+                  <div class="rating">
+                    2,615
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  <img loading="lazy" src="img/icons/first.svg" class="image" width="24" height="24" alt="Icon">
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-3.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-3.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Cat
+                  </div>
+                  <div class="rating">
+                    1,829
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  <img loading="lazy" src="img/icons/second.svg" class="image" width="24" height="24" alt="Icon">
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-4.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-4.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Trex
+                  </div>
+                  <div class="rating">
+                    1,511
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  <img loading="lazy" src="img/icons/third.svg" class="image" width="24" height="24" alt="Icon">
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-5.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-5.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Doge
+                  </div>
+                  <div class="rating">
+                    1,502
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  #4
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-3.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-3.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Duck
+                  </div>
+                  <div class="rating">
+                    1,485
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  #5
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="picture">
+                <picture>
+                  <source srcset="img/avatars/image-1.webp" type="image/webp">
+                  <img loading="lazy" src="img/avatars/image-1.png" class="image" width="48" height="48" alt="Image">
+                </picture>
+              </div>
+              <div class="content">
+                <div class="info">
+                  <div class="name">
+                    Dezhe111
+                  </div>
+                  <div class="rating">
+                    1,425
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="position">
+                  #6
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>

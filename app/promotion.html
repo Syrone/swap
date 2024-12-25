@@ -1,7 +1,100 @@
-<!DOCTYPE html><html lang="ru" class="page"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="format-detection" content="telephone=no, date=no, address=no, email=no"><title>SwapBot</title><link rel="preload" href="./fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="./fonts/SF-Pro-Display-Semibold.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="css/main.css"><script>(function() {
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>SwapBot</title>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/SF-Pro-Display-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function() {
       const themeCookie = document.cookie.split('; ').find(row => row.startsWith('theme='));
       const savedTheme = themeCookie ? themeCookie.split('=')[1] : null;
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
       }
-    })();</script><script defer="defer" src="js/main.js"></script></head><body class="page__body bg-body-inverse"><div class="site-container"><header class="header"><div class="container"></div></header><main class="main"><div class="container d-flex flex-column min-h-100"><div class="share-block-banner"><div class="share-block-banner-bg"><h2 class="h1 share-block-banner-title"><span data-i18next="banner_text_title"></span> <span class="icon"><svg><use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use></svg></span><br><span data-i18next="banner_text_subtitle"></span></h2></div><div><picture class="share-block-banner-picture"><source srcset="./gif/stars.gif" type="image/gif"><source srcset="./img/coin/stars.webp" type="image/webp"><img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="96" height="96" alt="Картинка"></picture><picture class="share-block-banner-picture"><source srcset="./gif/stars.gif" type="image/gif"><source srcset="./img/coin/stars.webp" type="image/webp"><img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="196" height="196" alt="Картинка"></picture><picture class="share-block-banner-picture"><source srcset="./gif/stars.gif" type="image/gif"><source srcset="./img/coin/stars.webp" type="image/webp"><img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="150" height="150" alt="Картинка"></picture></div></div><div class="share-block d-flex flex-column bg-block-inverse"><h2 class="share-block-title" data-loading-sceleton="text" data-i18next="promotion_text_title"></h2><ul class="list-disc share-block-list"><li data-loading-sceleton="text" data-i18next="promotion_list_item_1"></li><li data-loading-sceleton="text" data-i18next="promotion_list_item_2"></li><li data-loading-sceleton="text" data-i18next="promotion_list_item_3"></li></ul><p class="share-block-hint" data-loading-sceleton="text" data-i18next="user_agreement_text_2"></p><button type="button" class="btn btn-base btn-primary share-block-btn" data-loading-sceleton="button" data-i18next="promotion_btn"></button><footer class="footer"><div class="container"><p class="footer-copy" data-i18next="footer_text_copy" data-loading-sceleton="text">Для начала прочитайте<br><a href="#" class="btn btn-inherit footer-copy-link text-underline">Пользовательское соглашение</a></p></div></footer></div></div></main></div></body></html>
+    })();
+  </script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body bg-body-inverse">
+  <div class="site-container">
+    <header class="header">
+  <div class="container"></div>
+</header>
+
+    <main class="main">
+      <div class="container d-flex flex-column min-h-100">
+        <div class="share-block-banner">
+          <div class="share-block-banner-bg">
+            <h2 class="h1 share-block-banner-title">
+              <span data-i18next="banner_text_title"></span>
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/coin-star.svg#svg-coin-star"></use>
+                </svg>
+              </span>
+              <br>
+              <span data-i18next="banner_text_subtitle"></span>
+            </h2>
+          </div>
+          <div>
+            <picture class="share-block-banner-picture">
+              <source srcset="./gif/stars.gif" type="image/gif">
+              <source srcset="./img/coin/stars.webp" type="image/webp">
+              <img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="96" height="96" alt="Картинка">
+            </picture>
+            <picture class="share-block-banner-picture">
+              <source srcset="./gif/stars.gif" type="image/gif">
+              <source srcset="./img/coin/stars.webp" type="image/webp">
+              <img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="196" height="196" alt="Картинка">
+            </picture>
+            <picture class="share-block-banner-picture">
+              <source srcset="./gif/stars.gif" type="image/gif">
+              <source srcset="./img/coin/stars.webp" type="image/webp">
+              <img loading="lazy" src="./img/coin/stars.png" class="share-block-banner-image" width="150" height="150" alt="Картинка">
+            </picture>
+          </div>
+        </div>
+
+        <div class="share-block d-flex flex-column bg-block-inverse">
+          <h2 class="share-block-title" data-loading-sceleton="text" data-i18next="promotion_text_title"></h2>
+
+          <ul class="list-disc share-block-list">
+            <li data-loading-sceleton="text" data-i18next="promotion_list_item_1"></li>
+            <li data-loading-sceleton="text" data-i18next="promotion_list_item_2"></li>
+            <li data-loading-sceleton="text" data-i18next="promotion_list_item_3"></li>
+          </ul>
+
+          <p class="share-block-hint" data-loading-sceleton="text" data-i18next="user_agreement_text_2"></p>
+
+          <button type="button" class="btn btn-base btn-primary share-block-btn" data-loading-sceleton="button" data-i18next="promotion_btn"></button>
+
+          <footer class="footer">
+  <div class="container">
+    <p class="footer-copy" data-i18next="footer_text_copy" data-loading-sceleton="text">
+      Для начала прочитайте
+      <br>
+      <a href="#" class="btn btn-inherit footer-copy-link text-underline">
+        Пользовательское соглашение
+      </a>
+    </p>
+  </div>
+</footer>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>
