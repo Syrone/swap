@@ -581,6 +581,12 @@ a {
 [data-theme=dark] .btn-star-flow .content > *:nth-child(2) {
   opacity: 1;
 }
+[data-theme=dark] .btn-star-flow:is(:active, .is-active) .content > *:nth-child(1), [data-theme=dark] .btn-star-flow:is(:active, .is-active) .content > *:nth-child(2) {
+  opacity: 0;
+}
+[data-theme=dark] .btn-star-flow:is(:active, .is-active) .content > *:nth-child(3) {
+  opacity: 1;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -1786,10 +1792,12 @@ p + p {
 .accordion:not(:first-child) {
   margin-top: 1rem;
 }
+.accordion-item {
+  border-radius: 1rem;
+  overflow: hidden;
+}
 .accordion-item.is-open .accordion-button {
   border-bottom: 1px solid var(--light-9-color);
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
 }
 .accordion-item.is-open .accordion-button-icon {
   -webkit-transform: rotateX(180deg);
@@ -1819,6 +1827,8 @@ p + p {
   justify-content: stretch;
   gap: 1rem;
   text-align: start;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .accordion-button:active {
   -webkit-transform: none;

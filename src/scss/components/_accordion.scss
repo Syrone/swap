@@ -9,13 +9,13 @@
 	}
 
 	&-item {
+		border-radius: 1rem;
+		overflow: hidden;
 
 		&.is-open {
 			
 			.accordion-button {
 				border-bottom: 1px solid var(--light-9-color);
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
 
 				&-icon {
 					transform: rotateX(180deg);
@@ -49,6 +49,8 @@
 		justify-content: stretch;
 		gap: 1rem;
 		text-align: start;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 
 		&:active {
 			transform: none;
